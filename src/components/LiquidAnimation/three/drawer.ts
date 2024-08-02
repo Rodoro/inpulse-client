@@ -23,18 +23,18 @@ export class Drawer {
 
 		ctx.clearRect(0, 0, width, height)
 
-		const fontSize = window.innerWidth <= 768 ? 35 : 70
+		const fontSize = window.innerWidth <= 512 ? 24 : 70
 
 		ctx.textAlign = 'left'
 		ctx.textBaseline = 'hanging'
 
-		ctx.font = `bold ${fontSize}px 'Poppins'`
+		ctx.font = `bold ${fontSize}px '${window.innerWidth <= 512 ? "Unbounded" : "Poppins" }'`
 		ctx.fillStyle = '#fff'
 
 		const text1Metrics = ctx.measureText(this._text1)
 		const text2Metrics = ctx.measureText(this._text2)
 		const text3Metrics = ctx.measureText(this._text3)
-		if (window.innerWidth <= 768) {
+		if (window.innerWidth <= 512) {
 			console.log(width, text2Metrics.width)
 			ctx.fillText(this._text1, (width - text1Metrics.width) / 2, this._margin)
 			ctx.fillText(this._text2, (width - text2Metrics.width) / 2, this._margin + fontSize + this._mh)
