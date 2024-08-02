@@ -8,7 +8,7 @@ export class Drawer {
 	private readonly _margin = 130
 	private readonly _mh = 35
 
-	constructor(private _text1: string, private _text2: string, private _text3:string) {
+	constructor(private _text1: string, private _text2: string, private _text3: string) {
 		const canvas = document.createElement('canvas')
 		canvas.width = 1024
 		canvas.height = canvas.width / 2.2
@@ -23,7 +23,7 @@ export class Drawer {
 
 		ctx.clearRect(0, 0, width, height)
 
-		const fontSize = 70
+		const fontSize = window.innerWidth <= 768 ? 35 : 70
 
 		ctx.textAlign = 'left'
 		ctx.textBaseline = 'hanging'
@@ -31,12 +31,19 @@ export class Drawer {
 		ctx.font = `bold ${fontSize}px 'Poppins'`
 		ctx.fillStyle = '#fff'
 
+		const text1Metrics = ctx.measureText(this._text1)
 		const text2Metrics = ctx.measureText(this._text2)
 		const text3Metrics = ctx.measureText(this._text3)
-
-		ctx.fillText(this._text1, (this._margin)/2+20, this._margin)
-		ctx.fillText(this._text2, (width - text2Metrics.width)/2, this._margin + fontSize + this._mh )
-		ctx.fillText(this._text3, width - text3Metrics.width - this._margin, this._margin + (fontSize + this._mh)*2)
+		if (window.innerWidth <= 768) {
+			console.log(width, text2Metrics.width)
+			ctx.fillText(this._text1, (width - text1Metrics.width) / 2, this._margin)
+			ctx.fillText(this._text2, (width - text2Metrics.width) / 2, this._margin + fontSize + this._mh)
+			ctx.fillText(this._text3, (width - text3Metrics.width) / 2, this._margin + (fontSize + this._mh) * 2)
+		} else {
+			ctx.fillText(this._text1, (this._margin) / 2 + 20, this._margin)
+			ctx.fillText(this._text2, (width - text2Metrics.width) / 2, this._margin + fontSize + this._mh)
+			ctx.fillText(this._text3, width - text3Metrics.width - this._margin, this._margin + (fontSize + this._mh) * 2)
+		}
 
 		// ctx.lineWidth = 3
 		// ctx.strokeStyle = '#f00'

@@ -15,12 +15,19 @@ export const Background: VFC = () => {
 	}
 
 	const target = new THREE.Vector2()
-	useFrame(({ mouse }) => {
-		shader.uniforms.u_time.value += 0.005
-		target.set((mouse.x + 1) * 0.1, (mouse.y + 1) * 0.1)
-    //console.log((mouse.x + 1) * 0.1, (mouse.y + 1) * 0.1)
-		shader.uniforms.u_mouse.value.lerp(target, 0.2)
-	})
+  useFrame(({ mouse }) => {
+    if (window.innerWidth >= 768) {
+      shader.uniforms.u_time.value += 0.005
+      target.set((mouse.x + 1) * 0.1, (mouse.y + 1) * 0.1)
+      //console.log((mouse.x + 1) * 0.1, (mouse.y + 1) * 0.1)
+      shader.uniforms.u_mouse.value.lerp(target, 0.2)
+    } else{
+      shader.uniforms.u_time.value += 0.005
+      target.set(0.10338266051269723, 0.10296232908445804)
+      //console.log((mouse.x + 1) * 0.1, (mouse.y + 1) * 0.1)
+      shader.uniforms.u_mouse.value.lerp(target, 0.2)
+    }
+  })
 
 	return (
 		<Plane args={[4, 4]}>

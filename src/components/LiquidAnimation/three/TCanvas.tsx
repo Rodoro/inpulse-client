@@ -15,7 +15,7 @@ export const TCanvas: VFC = () => {
         <Canvas camera={OrthographicCamera} dpr={window.devicePixelRatio}>
             <Suspense fallback={null}>
                 <Background />
-                <Lense />
+                {window.innerWidth <= 768 ? <></> : <Lense />}
                 <TextPlane
 					text={['Creating communities', 'through', 'art events']}
 					vertexShader={oneVertexShader}

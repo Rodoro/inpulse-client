@@ -39,8 +39,10 @@ export const TextPlane: VFC<TextPlaneProps> = props => {
 	}
 
 	const handlePointerEnter = (e: ThreeEvent<PointerEvent>) => {
-		shader.uniforms.u_mouse.value.copy(e.uv!)
-		shader.uniforms.u_enable.value = true
+		if (window.innerWidth >= 768) {
+			shader.uniforms.u_mouse.value.copy(e.uv!)
+			shader.uniforms.u_enable.value = true
+		}
 	}
 
 	const handlePointerLeave = () => {
