@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 import { cnoise21 } from './glsl/noise';
 
 export const Background: VFC = () => {
-	const shader: THREE.ShaderLibShader = {
+	const shader: THREE.Shader = {
 		uniforms: {
 			u_time: { value: 0 },
 			u_mouse: { value: new THREE.Vector2() }

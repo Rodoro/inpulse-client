@@ -18,7 +18,7 @@ export const TextPlane: VFC<TextPlaneProps> = props => {
 
 	const { aspect } = useThree(({ viewport }) => viewport)
 
-	const shader: THREE.ShaderLibShader = {
+	const shader: THREE.Shader = {
 		uniforms: {
 			u_texture: { value: drawer.texture },
 			u_mouse: { value: new THREE.Vector2() },
