@@ -1,0 +1,34 @@
+.Header {
+}
+
+.isActive {
+  position: relative;
+}
+
+.isActive::after {
+  content: " ";
+  position: absolute;
+  right: -11px;
+  bottom: 8px;
+
+  display: block;
+  background-color: #fe1b1c;
+  width: 5px;
+  height: 5px;
+  border-radius: 60%;
+}
+.base_font {
+  font-family: Involve, Unbounded, sans-serif;
+  font-weight: 500;
+}
+
+.cross {
+  max-width: 28px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .isActive::after {
+    right: -7px;
+  }
+}

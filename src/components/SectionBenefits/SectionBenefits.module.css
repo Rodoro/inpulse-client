@@ -1,0 +1,339 @@
+.red {
+  color: #e11800;
+}
+
+.benefits {
+  display: grid;
+  grid-template-areas:
+    "title hashtags"
+    "pictures pictures"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+}
+
+.benefits_title {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 68px;
+  font-weight: 500;
+  padding-top: -10px;
+  line-height: 70px;
+}
+.above_title {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.hashtags {
+  grid-area: hashtags;
+  align-self: end;
+  justify-self: end;
+  font-family: Inter;
+  font-weight: 400;
+}
+
+.hashtags_line {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.hashtags_item {
+  border: 1px solid #e11800;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.pictures {
+  grid-area: pictures;
+  margin: 60px 0;
+  display: grid;
+
+  grid-template-areas:
+    "one . three . five"
+    "one two three four five"
+    "one two three four five"
+    "one two three four five"
+    ". two . four five";
+
+  grid-template-columns: 325px 175px 260px 185px 130px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  /* overflow-x: auto; */
+  gap: 64px;
+}
+
+.pictures::-webkit-scrollbar {
+  width: 20px;
+}
+
+.pictures::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.pictures::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.pictures::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+.card:nth-child(2) {
+  grid-area: two;
+  margin-bottom: 20px;
+}
+.card:nth-child(3) {
+  grid-area: three;
+}
+.card:nth-child(4) {
+  grid-area: four;
+}
+.card:nth-child(5) {
+  grid-area: five;
+  margin-right: 10px;
+
+  height: 402px;
+  margin: auto 0;
+}
+
+.card {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card_mobile {
+  display: none;
+}
+
+.card_img_wrapper {
+  width: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card_img {
+  width: 100%;
+}
+
+.number_border {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #e6e6e7, #8c9091);
+  border-radius: 50%;
+}
+
+.number_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.number {
+  color: #ffffffb2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card_caption {
+  font-family: Involve, Unbounded, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #21222a;
+}
+
+.button {
+  grid-area: button;
+  align-self: center;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.button_text {
+  font-family: "RoadRadio";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.button_img {
+  padding: 14px;
+  aspect-ratio: 1/1;
+  border: 1px #000 solid;
+  border-radius: 50%;
+}
+
+@media (max-width: 1482px) {
+  .pictures {
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .card_desktop {
+    display: none;
+  }
+  .card_mobile {
+    grid-area: five;
+    display: block;
+  }
+
+  .card_mobile .card_caption {
+    margin-top: 20px;
+  }
+  .benefits {
+    grid-template-areas:
+      "title title"
+      "pictures pictures"
+      "hashtags button";
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: 325px 175px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five five";
+    overflow: visible;
+    justify-content: center;
+  }
+  .card:nth-child(1n) {
+    height: 302px;
+  }
+
+  .card:nth-child(5) {
+    rotate: 0deg;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 640px) {
+  .card_desktop {
+    display: none;
+  }
+  .card_mobile {
+    grid-area: five;
+    display: block;
+  }
+
+  .card_mobile .card_caption {
+    margin-top: 20px;
+  }
+
+  .benefits {
+    grid-template-areas:
+      "title title"
+      "pictures pictures"
+      "hashtags button";
+  }
+
+  .benefits_title {
+    margin-left: 3%;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: 300px 175px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five five";
+    overflow: visible;
+    justify-content: center;
+  }
+
+  .card:nth-child(1n) {
+    height: 302px;
+  }
+
+  .card:nth-child(5) {
+    rotate: 0deg;
+  }
+
+  .hashtags {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .benefits {
+    grid-template-areas:
+      "title"
+      "hashtags"
+      "pictures"
+      "button";
+    grid-template-columns: 100%;
+  }
+
+  .benefits_title {
+    margin-left: 20px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 45px;
+  }
+
+  .above_title {
+    font-size: 14px;
+  }
+  .hashtags {
+    margin-right: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .pictures {
+    width: auto;
+    overflow-x: scroll;
+  }
+
+  .card:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .card:nth-child(5) {
+    margin-right: 20px;
+  }
+
+  .pictures {
+    grid-template-columns: 325px 175px 260px 185px 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hashtags_item {
+    padding: 6px;
+  }
+
+  .hashtags {
+    font-size: 13px;
+  }
+}
