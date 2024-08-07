@@ -94,7 +94,11 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
           </>
         ) : (
           <>
-            {t("in_pulse_is_a_global")} <br /> {t("event_agency")}
+            {t("in_pulse_is_a_global_p1")} <br />
+            {t("in_pulse_is_a_global_p2")} <br />
+            {t("in_pulse_is_a_global_p3")} <br />
+            {t("event_agency_p1")} <br />
+            {t("event_agency_p2")}
           </>
         )}
         <>
