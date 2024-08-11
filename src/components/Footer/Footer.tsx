@@ -72,7 +72,7 @@ export const Footer: React.FC<IFooterProps> = ({ classes = "" }) => {
             <div className={s.email}>
               <img className={s.email_img} src={background} alt="magic" />
               <div className={s.email_content}>
-                {t("newyork")} & {t("moscow")} <br />
+                {t("footer_text")} <br />
                 <a href="mailto:magic@inpulse.events">magic@inpulse.events</a>
               </div>
             </div>
