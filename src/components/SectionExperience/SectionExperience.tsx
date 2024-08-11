@@ -20,7 +20,7 @@ export const SectionExperience: React.FC<ISectionExperience> = ({ classes = "" }
     <section id="we" className={`${classes}`}>
       <div className={`${style.experience_container}`}>
         {" "}
-        <div className={`${style.experience_item} h-full`}>
+        <div className={`${style.experience_item} h-full transition-all`}>
           <img src={icon3} alt="" className={`${style.experience_item_image}`} />
           <h3 className={`${style.experience_item_name} text-[20px] font-Involve font-medium`}>{t("card_two_title")}</h3>
           <p className={`${style.experience_item_description} text-[16px] leading-snug font-Involve font-medium`}>{t("card_two_descr")}</p>{" "}
@@ -28,7 +28,7 @@ export const SectionExperience: React.FC<ISectionExperience> = ({ classes = "" }
             <img src={arrow} alt="arrow" className={`${style.experience_item_arrow}`} />{" "}
           </a>
         </div>
-        <div className={`${style.experience_item} h-full`}>
+        <div className={`${style.experience_item} h-full transition-all`}>
           <img src={icon2} alt="" className={`${style.experience_item_image}`} />
           <h3 className={`${style.experience_item_name} text-[20px] font-Involve font-medium`}>{t("card_one_title")}</h3>
           <p className={`${style.experience_item_description} text-[16px] leading-snug font-Involve font-medium`}>{t("card_one_descr")}</p>{" "}
@@ -36,7 +36,7 @@ export const SectionExperience: React.FC<ISectionExperience> = ({ classes = "" }
             <img src={arrow} alt="arrow" className={`${style.experience_item_arrow}`} />
           </a>
         </div>
-        <div className={`${style.experience_item} h-full`}>
+        <div className={`${style.experience_item} h-full transition-all`}>
           <img src={icon1} alt="" className={`${style.experience_item_image}`} />
           <h3 className={`${style.experience_item_name} text-[20px] font-Involve font-medium`}>{t("card_three_title")}</h3>
           <p className={`${style.experience_item_description} text-[16px] leading-snug font-Involve font-medium`}>{t("card_three_descr")}</p>

@@ -10,7 +10,9 @@
   border-radius: 26px;
   box-sizing: content-box;
   padding: 54px;
+}
 
+.experience_item:hover {
   box-shadow: 0px 21px 73px -36px rgba(0, 0, 0, 0.63);
 }
 
@@ -40,11 +42,9 @@
 
 .experience_item:nth-child(2) {
   margin-top: 60px;
-  box-shadow: none;
 }
 .experience_item:nth-child(3) {
   margin-top: 90px;
-  box-shadow: none;
 }
 
 @media (max-width: 1100px) {
