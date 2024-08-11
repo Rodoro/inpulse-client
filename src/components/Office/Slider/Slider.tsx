@@ -4,13 +4,16 @@ import slide_one from "./assets/imgs/slide_one.jpg";
 import slide_two from "./assets/imgs/slide_two.png";
 import slide_three from "./assets/imgs/slide_three.jpeg";
 import slide_four from "./assets/imgs/slide_four.jpeg";
+import slide_5 from "./assets/imgs/IMG_4690.jpg";
+import slide_6 from "./assets/imgs/IMGf_4201.jpg";
+import slide_7 from "./assets/imgs/AdobeStock_854135624 (1).jpeg"
 
 import left_arrow from "./assets/icons/left_arrow.svg";
 import right_arrow from "./assets/icons/right_arrow.svg";
 
 import style from "./Slider.module.css";
 
-const slides = [slide_one, slide_four, slide_three];
+const slides = [slide_one, slide_four, slide_three, slide_5, slide_6, slide_7];
 
 export const Slider: React.FC = () => {
   const [number, setNumber] = useState<number>(0);

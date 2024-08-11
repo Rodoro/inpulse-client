@@ -46,10 +46,10 @@ export const SectionBenefits: React.FC = () => {
         <Card src={fiveTabletImg} number={5} caption={`${t("ben_card_five")}`} classes={style.card_mobile} />
       </div>
 
-      <button className={style.button}>
+      <a  href="#contacts" className={style.button}>
         <span className={style.button_text}>{t("getintouch")}</span>
         <img className={style.button_img} src={arrow} alt="arrow" />
-      </button>
+      </a>
     </section>
   );
 };

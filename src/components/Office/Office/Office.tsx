@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { Slider } from "../Slider/Slider";
 
-import picture from "../assets/picture.jpg";
+import picture from "../assets/picture.png";
 
 import style from "./Office.module.css";
 
@@ -24,12 +24,12 @@ export const Office: React.FC<IOfficeProps> = ({ classes }) => {
           <br />
           <span className={style.title_down}>{t("new_york")}</span>
         </div>
-        <div className={style.desc}>{t("office_desc")}</div>
+        <div className={style.desc + " max-w-[530px]"}>{t("office_desc")}</div>
       </div>
       <div className={style.slider}>
         <Slider />
         <div className={style.picture}>
-          <img src={picture} alt="" />
+          <img src={picture} alt="office" />
         </div>
       </div>
     </section>

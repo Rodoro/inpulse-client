@@ -31,11 +31,12 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
   }, []);
 
   useEffect(() => {
-    
+
   }, [wCanvas])
 
   function onGetCurrentWindowWidth(e: any) {
-    setWidth(e.target.innerWidth);
+    setWidth(e.target.innerWidth)
+    setWCanvas(canvasRef.current?.offsetWidth ? canvasRef.current?.offsetWidth : 100);
   }
 
   function selectBackground() {
@@ -67,9 +68,9 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
         {width >= 529 ? (
           <>
             <div className={`${style.title_text}`}>
-              {t("bridging")} <br /> {t("cultures")}
-              <span> {t("create")}</span> <br />
-              <span className={`text-[#E11800]`}>{t("effective")}</span> {t("business")} <br /> {t("solutions")}
+              {t("bridging")} <br /> {t("cultures")} <br />
+              <span> {t("create")}</span>
+              <span className={`text-[#E11800]`}> {t("effective")}</span> <br />{t("business")} <br /> {t("solutions")}
             </div>
           </>
         ) : (
@@ -88,7 +89,7 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
   function ruText() {
     return (
       <div className={`${style.sub_title_text}`}>
-        {width >= 800 ? (
+        {/* {width >= 800 ? (
           <>
             {t("in_pulse_is_a_global")} <br /> {t("event_agency")}
           </>
@@ -100,16 +101,14 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
             {t("event_agency_p1")} <br />
             {t("event_agency_p2")}
           </>
-        )}
+        )} */}
         <>
           <div className={`${style.title_text}`}>
-            <span> {t("create")}</span>
-            <br />
-            <span className={`text-[#E11800]`}>{t("unstandart")}</span>
-            <br />
-            {t("business")}
-            <br />
-            {t("joint")}
+            {t("in_pulse_is_a_global_p1")} <br />
+            {t("in_pulse_is_a_global_p2")} <br />
+            <span className={`text-[#E11800]`}>{t("in_pulse_is_a_global_p3")}</span><br />
+            {t("event_agency_p1")} <br />
+            {t("event_agency_p2")}
           </div>
         </>
       </div>
@@ -143,7 +142,7 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
         </div>
         <img src={lock} className={style.circle_explore_lock} alt="" />
       </div>
-      <div className={`${style.title_container}`}>{i18n.language === "ru" ? ruText() : engText()}</div>
+      <div className={`${style.title_container} ${i18n.language === "ru" ? 'mb-5' : ''}`}>{i18n.language === "ru" ? ruText() : engText()}</div>
     </div>
   );
 };

@@ -22,9 +22,9 @@ export const SectionDo: React.FC<ISectionDo> = ({ classes = "" }) => {
               <span className={`${style.red}`}> {t("mission")}</span>
             </h3>
           </div>
-          <span className={`${style.do_hashtag}`}>
+          {/* <span className={`${style.do_hashtag}`}>
             <span>{t("motto")}</span>
-          </span>
+          </span> */}
         </div>
         <div className={`${style.do_info} font-Involve font-medium`}>
           <p className={`${style.description}`}>

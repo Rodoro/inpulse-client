@@ -23,7 +23,7 @@ export class Drawer {
 
 		ctx.clearRect(0, 0, width, height)
 
-		const fontSize = window.innerWidth <= 512 ? 24 :58
+		const fontSize = window.innerWidth <= 512 ? 24 : 62
 
 		ctx.textAlign = 'left'
 		ctx.textBaseline = 'hanging'

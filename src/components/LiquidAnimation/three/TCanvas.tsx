@@ -17,12 +17,12 @@ export const TCanvas: VFC = () => {
                 <Background />
                 {window.innerWidth <= 768 ? <></> : <Lense />}
                 <TextPlane
-					text={['Creating communities', 'through', 'art events']}
+					text={['Creating Communities', 'Through', 'Art Events']}
 					vertexShader={oneVertexShader}
 					fragmentShader={oneFragmentShader}
 				/>
 				<TextPlane
-					text={['Creating communities', 'through', 'art events']}
+					text={['Creating Communities', 'Through', 'Art Events']}
 					vertexShader={twoVertexShader}
 					fragmentShader={twoFragmentShader}
 				/>
