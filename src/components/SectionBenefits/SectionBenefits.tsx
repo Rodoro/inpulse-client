@@ -38,10 +38,10 @@ export const SectionBenefits: React.FC = () => {
       </div>
 
       <div className={style.pictures}>
-        <Card src={oneImg} number={1} title={`${t("ben_card_one_title")}`} caption={`${t("ben_card_one")}`} />
-        <Card src={twoImg} number={2} title={`${t("ben_card_two_title")}`} caption={`${t("ben_card_two")}`} />
-        <Card src={threeImg} number={3} title={`${t("ben_card_three_title")}`} caption={`${t("ben_card_three")}`} />
-        <Card src={fourImg} number={4} title={`${t("ben_card_four_title")}`} caption={`${t("ben_card_four")}`} />
+        <Card src={oneImg} number={1} caption={`${t("ben_card_one")}`} />
+        <Card src={twoImg} number={2} caption={`${t("ben_card_two")}`} />
+        <Card src={threeImg} number={3} caption={`${t("ben_card_three")}`} />
+        <Card src={fourImg} number={4} caption={`${t("ben_card_four")}`} />
         <Card src={fiveImg} number={5} caption={`${t("ben_card_five")}`} classes={style.card_desktop} />
         <Card src={fiveTabletImg} number={5} caption={`${t("ben_card_five")}`} classes={style.card_mobile} />
       </div>
