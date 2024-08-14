@@ -103,7 +103,9 @@ export const Footer: React.FC<IFooterProps> = ({ classes = "" }) => {
                 {t("contacts")}
               </a>
             </nav>
-            <div className={s.copyright}>All rights reserved © 2024 In Pulse</div>
+            <div className={s.copyright}>
+              Copyright © 2024 In Pulse. All Rights Reserved.
+            </div>
           </div>
         </Layout>
       </div>

@@ -85,11 +85,9 @@
   }
 
   .experience_item:nth-child(2) {
-    box-shadow: 0px 21px 73px -36px rgba(0, 0, 0, 0.63);
     margin-top: 30px;
   }
   .experience_item:nth-child(3) {
-    box-shadow: 0px 21px 73px -36px rgba(0, 0, 0, 0.63);
     margin-top: 30px;
   }
 }

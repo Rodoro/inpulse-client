@@ -69,16 +69,16 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
           <>
             <div className={`${style.title_text}`}>
               {t("bridging")} <br /> {t("cultures")} <br />
-              <span> {t("create")}</span>
-              <span className={`text-[#E11800]`}> {t("effective")}</span> <br />{t("business")} <br /> {t("solutions")}
+              <span> {t("create")}</span> <br />
+              <span className={`text-[#E11800]`}> {t("effective")} {t("business")} </span> <br /> {t("solutions")}
             </div>
           </>
         ) : (
           <>
             <div className={`${style.title_text}`}>
               {t("bridging")} <br /> {t("cultures")} <br />
-              <span> {t("create")}</span>
-              <span className={`text-[#E11800]`}> {t("effective")}</span> <br /> {t("business")} <br /> {t("solutions")}
+              <span> {t("create")}</span><br />
+              <span className={`text-[#E11800]`}> {t("effective")}{t("business")}</span>  <br /> {t("solutions")}
             </div>
           </>
         )}
