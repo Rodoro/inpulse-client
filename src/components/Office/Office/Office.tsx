@@ -28,9 +28,9 @@ export const Office: React.FC<IOfficeProps> = ({ classes }) => {
       </div>
       <div className={style.slider}>
         <Slider />
-        <div className={style.picture}>
+        {/* <div className={style.picture}>
           <img src={picture} alt="office" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

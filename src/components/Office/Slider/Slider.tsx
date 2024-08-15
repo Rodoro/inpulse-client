@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import slide_one from "./assets/imgs/slide_one.jpg";
 import slide_two from "./assets/imgs/slide_two.png";
-import slide_three from "./assets/imgs/slide_three.jpeg";
 import slide_four from "./assets/imgs/slide_four.jpeg";
+import slide_8 from "./assets/imgs/IMG_1819.jpg";
+import slide_9 from "./assets/imgs/4CB3B315-1367-450E-B01C-D45E828B64CE.jpg";
+import slide_10 from "./assets/imgs/5F020D50-E13D-446B-8F99-AC8D01952850.jpg";
 import slide_5 from "./assets/imgs/IMG_4690.jpg";
 import slide_6 from "./assets/imgs/IMGf_4201.jpg";
 import slide_7 from "./assets/imgs/AdobeStock_854135624 (1).jpeg"
@@ -13,7 +14,7 @@ import right_arrow from "./assets/icons/right_arrow.svg";
 
 import style from "./Slider.module.css";
 
-const slides = [slide_one, slide_four, slide_three, slide_5, slide_6, slide_7];
+const slides = [slide_four, slide_5, slide_6, slide_7, slide_8, slide_9, slide_10];
 
 export const Slider: React.FC = () => {
   const [number, setNumber] = useState<number>(0);
