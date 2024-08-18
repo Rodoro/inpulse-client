@@ -142,7 +142,7 @@ export const LiquidAnimation: React.FC<ILiquidAnimationProps> = ({ classes }) =>
         </div>
         <img src={lock} className={style.circle_explore_lock} alt="" />
       </div>
-      <div className={`${style.title_container} ${i18n.language === "ru" ? 'mb-5' : ''}`}>{i18n.language === "ru" ? ruText() : engText()}</div>
+      <div className={`${style.title_container}`}>{i18n.language === "ru" ? ruText() : engText()}</div>
     </div>
   );
 };
