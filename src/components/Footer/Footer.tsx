@@ -7,7 +7,7 @@ import { Layout } from "../Layout/Layout";
 import vector from "./assets/vector.png";
 import heart from "./assets/heart.png";
 import pulse from "./assets/pulse.png";
-import logo from "../Header/assets/logo.svg";
+import logo from "../Header/assets/logo.png";
 
 import instagram from "./assets/instagram.svg";
 import linkedIn from "./assets/linkedln.svg";

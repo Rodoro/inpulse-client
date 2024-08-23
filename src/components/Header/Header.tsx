@@ -6,7 +6,7 @@ import { Switcher } from "../Switcher/Switcher";
 
 import { HeaderBurger } from "../Header-burger/HeaderBurger";
 
-import logo from "./assets/logo.svg";
+import logo from "./assets/logo.png";
 import cross from "./assets/cross.svg";
 
 import style from "./Header.module.css";
